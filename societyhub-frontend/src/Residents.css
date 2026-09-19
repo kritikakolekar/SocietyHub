@@ -1,0 +1,511 @@
+.residents-page {
+  min-height: 100vh;
+  padding: 35px;
+  background: #f8fafc;
+}
+
+/* Header */
+
+.residents-header {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
+  padding-top: 38px;
+}
+
+.residents-header .back-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.2s;
+}
+
+.residents-header .back-button:hover {
+  color: #1d4ed8;
+  transform: translateX(-3px);
+}
+
+.page-label {
+  margin: 0 0 8px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.residents-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.header-description {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Add Resident Button */
+
+.add-resident-button {
+  border: none;
+  border-radius: 12px;
+  padding: 13px 19px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.22);
+  transition: 0.2s;
+}
+
+.add-resident-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.3);
+}
+
+/* Statistics */
+
+.resident-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.resident-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 17px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+  transition: 0.2s;
+}
+
+.resident-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+}
+
+.resident-stat-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #eff6ff;
+  font-size: 22px;
+}
+
+.resident-stat-card span {
+  display: block;
+  margin-bottom: 5px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.resident-stat-card strong {
+  color: #0f172a;
+  font-size: 25px;
+}
+
+/* Add Resident Form */
+
+.resident-form-card {
+  margin-bottom: 25px;
+  padding: 26px;
+  background: white;
+  border: 1px solid #dbeafe;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.form-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.form-card-header h2 {
+  margin: 0 0 5px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.form-card-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.form-card-header > span {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #eff6ff;
+  font-size: 21px;
+}
+
+.resident-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.resident-input-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.resident-input-group input,
+.resident-input-group select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+  color: #0f172a;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.resident-input-group input:focus,
+.resident-input-group select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.save-resident-button {
+  margin-top: 22px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.save-resident-button:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+
+/* Directory */
+
+.resident-directory-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.directory-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 26px 20px;
+}
+
+.directory-header h2 {
+  margin: 0 0 5px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.directory-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.directory-count {
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Search and Filters */
+
+.resident-filters {
+  display: flex;
+  gap: 12px;
+  padding: 0 26px 20px;
+}
+
+.resident-search {
+  position: relative;
+  flex: 1;
+}
+
+.resident-search > span {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  font-size: 15px;
+}
+
+.resident-search input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.resident-search input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.resident-filters > select {
+  min-width: 150px;
+  padding: 12px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  background: white;
+  color: #334155;
+  font-size: 13px;
+}
+
+/* Table */
+
+.resident-table-wrapper {
+  overflow-x: auto;
+  border-top: 1px solid #e2e8f0;
+}
+
+.resident-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.resident-table th {
+  padding: 14px 20px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  text-align: left;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.resident-table td {
+  padding: 17px 20px;
+  border-top: 1px solid #f1f5f9;
+  color: #334155;
+  font-size: 13px;
+}
+
+.resident-table tbody tr {
+  transition: 0.15s;
+}
+
+.resident-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+/* Resident Name */
+
+.resident-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.resident-avatar {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: #1d4ed8;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.resident-name-cell strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.resident-name-cell span {
+  display: block;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* Flat */
+
+.flat-cell strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #0f172a;
+}
+
+.flat-cell span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* Phone */
+
+.phone-cell {
+  color: #475569;
+}
+
+/* Family */
+
+.family-count {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 12px;
+}
+
+/* Status */
+
+.active-badge {
+  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 20px;
+  background: #ecfdf5;
+  color: #059669;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Empty State */
+
+.resident-empty-state {
+  padding: 65px 25px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.resident-empty-state > div {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border-radius: 18px;
+  background: #eff6ff;
+  font-size: 28px;
+}
+
+.resident-empty-state h3 {
+  margin: 0 0 7px;
+  color: #0f172a;
+  font-size: 17px;
+}
+
+.resident-empty-state p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .resident-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resident-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .residents-page {
+    padding: 25px;
+  }
+
+  .residents-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-resident-button {
+    width: 100%;
+  }
+
+  .resident-filters {
+    flex-direction: column;
+  }
+
+  .resident-filters > select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .residents-page {
+    padding: 18px;
+  }
+
+  .resident-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .resident-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .residents-header h1 {
+    font-size: 28px;
+  }
+
+  .directory-header {
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+}

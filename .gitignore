@@ -1,0 +1,19 @@
+# React
+node_modules/
+dist/
+build/
+
+# Java / Maven
+target/
+*.class
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,263 @@
+.events-page {
+  min-height: 100vh;
+  padding: 35px;
+  background: #f8fafc;
+}
+
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.events-header h1 {
+  margin: 20px 0 8px;
+  font-size: 32px;
+  color: #0f172a;
+}
+
+.events-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.back-button {
+  border: none;
+  background: #e2e8f0;
+  color: #334155;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background: #cbd5e1;
+}
+
+.events-count {
+  min-width: 140px;
+  padding: 18px;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  text-align: center;
+}
+
+.events-count span {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.events-count strong {
+  display: block;
+  font-size: 26px;
+  color: #2563eb;
+}
+
+.events-count small {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.event-form-card {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  margin-bottom: 35px;
+}
+
+.event-form-card h2 {
+  margin: 0 0 25px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  color: #0f172a;
+  background: #ffffff;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+.add-event-button {
+  margin-top: 22px;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add-event-button:hover {
+  background: #1d4ed8;
+}
+
+.events-section {
+  margin-top: 10px;
+}
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0 0 5px;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.event-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  transition: 0.2s;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.1);
+}
+
+.event-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.event-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  font-size: 22px;
+}
+
+.delete-event-button {
+  border: none;
+  background: #fef2f2;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.delete-event-button:hover {
+  background: #fee2e2;
+}
+
+.event-card h3 {
+  margin: 0 0 16px;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.event-detail {
+  margin: 9px 0;
+  color: #475569;
+  font-size: 13px;
+}
+
+.event-description {
+  margin: 18px 0 0;
+  padding-top: 15px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 950px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .events-page {
+    padding: 22px;
+  }
+
+  .events-header {
+    flex-direction: column;
+  }
+
+  .events-count {
+    width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
