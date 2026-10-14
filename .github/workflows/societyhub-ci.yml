@@ -36,4 +36,3 @@ jobs:
       - name: Build backend
         working-directory: societyhub-backend
         run: mvn -B -DskipTests package
-```
