@@ -1,10 +1,13 @@
+
 name: SocietyHub CI Pipeline
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -26,6 +29,11 @@ jobs:
           java-version: '21'
           cache: maven
           cache-dependency-path: societyhub-backend/pom.xml
+
+      - name: Verify Java and Maven
+        run: |
+          java -version
+          mvn -version
 
       - name: Build backend
         run: mvn -B -DskipTests package
